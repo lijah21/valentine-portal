@@ -26,7 +26,7 @@ html_template = """
 </head>
 <body>
     <h1>Will you be my Valentine? ❤️</h1>
-    <img src="/static/7.jpg" alt="Our Photo">
+    <img src="/static/US.jpg" alt="Our Photo">
     
     <div class="btn-container">
         <button id="yes-btn" onclick="handleYesClick()">YES</button>
@@ -46,7 +46,7 @@ html_template = """
         }
 
         function handleYesClick() {
-            alert('THANK YOU SO MUCH MAHAL, I LOVE YOU ❤️! 🌹✨');
+            alert('THANK YOU SO MUCH, I LOVE YOU ❤️! 🌹✨');
             // This tells the Python backend to create the CSV file
             fetch('/accept-valentine', { method: 'POST' })
             .then(response => {
@@ -69,7 +69,7 @@ def accept_valentine():
         with open('responses.csv', mode='a', newline='') as file:
             writer = csv.writer(file)
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            writer.writerow([timestamp, "YES! Mahal said yes!"])
+            writer.writerow([timestamp, "YES! SHE said YES!"])
         print(f"✅ Success! Response logged at {timestamp}")
         return jsonify({"status": "success"}), 200
     except Exception as e:
@@ -80,8 +80,8 @@ def accept_valentine():
 if __name__ == '__main__':
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    if not os.path.exists(os.path.join(script_dir, 'static', '7.jpg')):
-        print("⚠️ WARNING: static/7.jpg not found!")
+    if not os.path.exists(os.path.join(script_dir, 'static', 'US.jpg')):
+        print("⚠️ WARNING: static/US.jpg not found!")
 
    
     public_url = ngrok.connect(5000).public_url
