@@ -12,6 +12,11 @@ I built this using a full-stack approach to make sure it was more than just a si
 * **The Connection (Ngrok):** Allowed me to send this straight to your phone so you could see it anywhere.
 * **The Gallery (Static Assets):** Holds our favorite photo (`US.jpg`) that makes this site ours.
 
+## 🛠️ How to Run
+1. Install dependencies: `pip install flask`
+2. Run the server: `python valentines.py`
+3. Expose via tunnel: `ngrok http 5000`
+
 ## 📂 Project Memory
 * `/templates`: The visual design of our portal.
 * `/static`: Where our photo is safely kept.
