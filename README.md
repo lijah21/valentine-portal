@@ -22,6 +22,6 @@ I built this using a full-stack approach to make sure it was more than just a si
 * `/static`: Where our photo is safely kept.
 * `valentines.py`: The logic that runs the whole surprise.
 * `responses.csv`: The permanent record of your "Yes!"
-
+Note: The application will automatically create a `responses.csv` file to log interactions when first run.
 ---
 *Built with love for you, by Lijah*
